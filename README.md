@@ -1,4 +1,15 @@
 # MVP compose init container demo
+<!--ts-->
+   * [MVP compose init container demo](#mvp-compose-init-container-demo)
+      * [Foreword](#foreword)
+      * [Disclaimer](#disclaimer)
+      * [Example basics](#example-basics)
+      * [Prerequisite for running the demo](#prerequisite-for-running-the-demo)
+      * [How to run the demo](#how-to-run-the-demo)
+
+<!-- Added by: olcla, at: dim 12 déc 2021 19:29:59 CET -->
+
+<!--te-->
 
 ## Foreword
 This example was crafter as an answer to [a StackOverflow question](https://stackoverflow.com/questions/70322031/does-docker-compose-support-init-container)
