@@ -1,0 +1,36 @@
+---
+x-common-env: &cenv
+    MYSQL_ROOT_PASSWORD: totopipobingo
+
+services:
+    db:
+        image: mysql:8.0
+        command: --default-authentication-plugin=mysql_native_password
+        environment:
+            <<: *cenv
+    init-db:
+        image: mysql:8.0
+        command: /initproject.sh
+        environment:
+            <<: *cenv
+        volumes:
+            - ./initproject.sh:/initproject.sh
+        depends_on:
+            db:
+                condition: service_started
+    my_app:
+        build:
+            context: ./php
+        environment:
+            <<: *cenv
+        volumes:
+            - ./index.php:/var/www/html/index.php
+        ports:
+            - 9999:80
+        depends_on:
+            init-db:
+                condition: service_completed_successfully
+
+
+
+
