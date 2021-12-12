@@ -12,7 +12,7 @@
 <!--te-->
 
 ## Foreword
-This example was crafter as an answer to [a StackOverflow question](https://stackoverflow.com/questions/70322031/does-docker-compose-support-init-container)
+This example was crafted as an answer to [a StackOverflow question](https://stackoverflow.com/questions/70322031/does-docker-compose-support-init-container)
 about using init containers with docker-compose.
 
 According to [This PR](https://github.com/docker/compose-cli/issues/1499) the feature is available since docker-compose 1.29
