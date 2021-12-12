@@ -1,6 +1,6 @@
-# MVP compose init container demo
+# Compose init container demo
 <!--ts-->
-   * [MVP compose init container demo](#mvp-compose-init-container-demo)
+   * [Compose init container demo](#mvp-compose-init-container-demo)
       * [Foreword](#foreword)
       * [Disclaimer](#disclaimer)
       * [Example basics](#example-basics)
