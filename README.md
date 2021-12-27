@@ -29,7 +29,7 @@ wait for different services to be fully ready before you spin your final applica
 What the example basically does is:
 1. spin up a mysql container
 2. spin up an init container which will wait for db to be available (retries in executed bash script),
-   create a db,a table and add some entries (from execusted bash script), then exit
+   create a db,a table and add some entries (from executed bash script), then exit
 3. spin up an application container (php/mysqli/apache) *which will only start once the init container has fully done
    its job* and exists with a RC=0
 
