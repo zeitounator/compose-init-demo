@@ -27,11 +27,11 @@ wait for different services to be fully ready before you spin your final applica
 
 ## Example basics
 What the example basically does is:
-1. spin up a mysql container
+1. spin up a mysql container.
 2. spin up an init container which will wait for db to be available (retries in executed bash script),
-   create a db,a table and add some entries (from executed bash script), then exit
+   create a db, a table and add some entries (from executed bash script), then exits.
 3. spin up an application container (php/mysqli/apache) *which will only start once the init container has fully done
-   its job* and exists with a RC=0
+   its job* and exits with a RC=0.
 
 ## Prerequisite for running the demo
 * A running docker installation with internet access
@@ -52,7 +52,7 @@ You should then see the `db` container start, followed by the `init-db` containe
 for the `db` container to fully end its job. This should take several seconds as the `initprojet.sh` script contains a
 loop to wait for the mysql connection to be available prior to creating a scaffold db with some data.
 
-Once the init container exists successfully, you should see the actual application container `my_app` start finally.
+Once the init container exits successfully, you should finally see the actual application container `my_app` start.
 You can point your browser to http://localhost:9999/ to see the test page which will show the 3 rows that were created
 by the init container
 
